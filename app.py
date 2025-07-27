@@ -107,7 +107,7 @@ if not df.empty:
 
 st.subheader("📈 プライベート支出の進捗")
 
-private_limit = st.number_input("プライベート支出の上限（円）", min_value=1000, value=50000, step=1000)
+private_limit = st.number_input("プライベート支出の上限（円）", min_value=1000, value=30000, step=1000)
 
 private_df = df[(df["種別"] == "支出") & (df["タグ"].str.contains("プライベート", na=False))]
 private_total = private_df["金額"].sum()
